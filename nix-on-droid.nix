@@ -3,7 +3,7 @@
   environment.packages = with pkgs; [
     vim
     fish
-    nerdfonts.override { fonts = [ "CascadiaCode" ]; }
+    nerdfonts
   ];
 
   android-integration = {
