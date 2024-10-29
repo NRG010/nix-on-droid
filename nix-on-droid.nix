@@ -1,9 +1,9 @@
 { config, lib, pkgs, ... }: {
 
   environment.packages = with pkgs; [
-    git
     vim
     fish
+    nerdfonts.override { fonts = [ "CascadiaCode" ]; }
   ];
 
   android-integration = {
@@ -34,7 +34,7 @@
   };
 
   time.timeZone = "Asia/Kolkata";
-  terminal.font = "./fonts/CaskaydiaCoveNerdFont-Regular.ttf";
+  terminal.font = "${pkgs.nerdfonts}/share/fonts/truetype/CaskaydiaCoveNerdFont-Regular.ttf";
 
   home-manager = {
     config = ./home-manager;
